@@ -6,3 +6,8 @@
 <% @studio.movies.each do |movie| %>
   <p><%= movie.title %></p>
 <% end %>
+
+<h3><%= @studio.name %>'s actors:</h3>
+<% @studio_actors.each do |actor| %>
+  <p><%= actor %></p>
+<% end %>
