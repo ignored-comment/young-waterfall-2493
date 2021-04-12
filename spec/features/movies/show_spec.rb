@@ -35,7 +35,15 @@ RSpec.describe 'movies show page' do
 
       visit "movies/#{die_another_day.id}"
 
-      save_and_open_page            
+      expect(page).to have_content("Pierce Brosnan")
+      expect(page).to have_content("Halle Berry")
+      expect(page).to have_content('Add an actor to this movie:')
+      expect(page).to have_content('Name')
+
+      fill_in "name", with: "Famke"
+      click_button "Submit"
+
+      expect(page).to have_content("Famke Janssen")
     end
   end
 end
