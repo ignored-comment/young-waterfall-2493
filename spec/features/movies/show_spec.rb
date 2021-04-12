@@ -17,8 +17,6 @@ RSpec.describe 'movies show page' do
       expect(page).to have_content("Action Thriller")
       expect(page).to have_content("Pierce Brosnan")
       expect(page).to have_content("Halle Berry")
-
-      save_and_open_page
     end
   end
 end
